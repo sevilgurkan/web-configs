@@ -1,9 +1,42 @@
 {
   "name": "web-configs",
   "version": "1.0.0",
-  "author": "Gürkan Sevil",
-  "description": "",
-  "license": "ISC",
+  "private": true,
+  "description": "Common configurations for building web apps",
   "keywords": [],
-  "scripts": {}
+  "homepage": "https://github.com/sevilgurkan/web-configs#readme",
+  "bugs": {
+    "url": "https://github.com/sevilgurkan/web-configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sevilgurkan/web-configs.git"
+  },
+  "license": "MIT",
+  "author": "Gürkan Sevil",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "eslint:check": "eslint --max-warnings=0 .",
+    "prepare": "husky",
+    "prettier:check": "prettier --check ."
+  },
+  "lint-staged": {
+    "*": "prettier -w --ignore-unknown"
+  },
+  "prettier": "./packages/prettier/index.js",
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "eslint": "^9.18.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-packagejson": "^2.5.6"
+  },
+  "peerDependencies": {
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2"
+  }
 }
