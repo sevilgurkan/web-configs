@@ -14,3 +14,7 @@ lerna-debug.log*
 .DS_Store
 # Keys
 .env
+
+# Tests
+coverage/
+
