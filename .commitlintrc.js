@@ -41,8 +41,8 @@ module.exports = {
         'prettier',
         // TypeScript-related changes
         'typescript',
-        // Go-related changes
-        'golang',
+        // Plop-related changes
+        'plop',
       ],
     ],
     'scope-empty': [1, 'never'],
