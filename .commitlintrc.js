@@ -5,6 +5,8 @@ module.exports = {
       2,
       'always',
       [
+        // Miscellaneous commits e.g. modifying .gitignore
+        'chore',
         // Changes that affect the build system or dependency-only changes
         'build',
         // Changes to CI workflows
@@ -27,6 +29,8 @@ module.exports = {
         'test',
         // Used for automated releases-only
         'release',
+        // Commits, that affect operational components like infrastructure, deployment, backup, recovery, ...
+        'ops',
       ],
     ],
     'scope-enum': [
