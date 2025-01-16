@@ -51,5 +51,4 @@ module.exports = {
     ],
     'scope-empty': [1, 'never'],
   },
-  ignores: [(commitMessage) => /^Version Packages$/.test(commitMessage)],
 };
