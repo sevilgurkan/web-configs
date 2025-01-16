@@ -2,6 +2,10 @@
   "name": "@fmss/prettier-config",
   "version": "0.0.0",
   "description": "Prettier config",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
   "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/prettier-config/README.md",
   "bugs": {
     "url": "https://github.com/sevilgurkan/web-configs/issues"
@@ -13,11 +17,16 @@
   },
   "license": "MIT",
   "author": "Gürkan Sevil",
-  "sideEffects": false,
   "main": "src/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@kanvil/eslint-plugin": "^0.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0"
+  },
   "publishConfig": {
-    "@shopify:registry": "https://registry.npmjs.org",
+    "@kanvil:registry": "https://registry.npmjs.org",
     "access": "public"
   }
 }
