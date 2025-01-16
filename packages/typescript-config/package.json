@@ -1,6 +1,6 @@
 {
   "name": "@fmss/typescript-config",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Typescript config",
   "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/typescript-config/README.md",
   "bugs": {
