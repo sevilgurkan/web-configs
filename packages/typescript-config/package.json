@@ -1,0 +1,20 @@
+{
+  "name": "@fmss/typescript-config",
+  "version": "0.0.0",
+  "description": "Typescript config",
+  "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/typescript-config/README.md",
+  "bugs": {
+    "url": "https://github.com/sevilgurkan/web-configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevilgurkan/web-configs.git",
+    "directory": "packages/typescript-config"
+  },
+  "license": "MIT",
+  "author": "Gürkan Sevil",
+  "publishConfig": {
+    "@kanvil:registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}
