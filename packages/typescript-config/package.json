@@ -1,6 +1,6 @@
 {
   "name": "@fmss/typescript-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Typescript config",
   "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/typescript-config/README.md",
   "bugs": {
@@ -13,8 +13,15 @@
   },
   "license": "MIT",
   "author": "Gürkan Sevil",
+  "exports": {
+    "./base": "./base.json",
+    "./dom": "./dom.json",
+    "./library": "./library.json",
+    "./node-base": "./node-base.json",
+    "./node-library": "./node-library.json"
+  },
   "publishConfig": {
-    "@kanvil:registry": "https://registry.npmjs.org",
+    "@fmss:registry": "https://registry.npmjs.org",
     "access": "public"
   }
 }
