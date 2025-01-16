@@ -7,7 +7,7 @@
   "sideEffects": false,
   "publishConfig": {
     "access": "public",
-    "@shopify:registry": "https://registry.npmjs.org"
+    "@fmss:registry": "https://registry.npmjs.org"
   },
   "author": "Gürkan Sevil",
   "repository": {
