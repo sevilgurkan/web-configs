@@ -30,7 +30,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm run release
+          publish: HUSKY=0 npm run release
           commit: 'release: version packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
