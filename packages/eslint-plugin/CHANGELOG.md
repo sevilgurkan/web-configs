@@ -9,4 +9,4 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- `@fmss/eslint-config` package
+- `@fmss/eslint-plugin` package
