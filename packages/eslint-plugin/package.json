@@ -1,0 +1,49 @@
+{
+  "name": "@fmss/eslint-plugin",
+  "version": "0.0.0",
+  "description": "Eslint plugin",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslintplugin",
+    "eslint-config",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/eslint-plugin/README.md",
+  "bugs": {
+    "url": "https://github.com/sevilgurkan/web-configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevilgurkan/web-configs.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "license": "MIT",
+  "author": "Gürkan Sevil",
+  "dependencies": {
+    "@eslint/js": "^9.18.0",
+    "@kanvil/eslint-plugin": "^0.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-sort-class-members": "^1.21.0",
+    "globals": "^15.14.0"
+  },
+  "devDependencies": {
+    "react": "^19.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.18.0"
+  },
+  "publishConfig": {
+    "@kanvil:registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}
