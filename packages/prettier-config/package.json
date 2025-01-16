@@ -1,6 +1,6 @@
 {
   "name": "@fmss/prettier-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Prettier config",
   "keywords": [
     "prettier",
@@ -19,14 +19,10 @@
   "author": "Gürkan Sevil",
   "main": "src/index.js",
   "dependencies": {
-    "@kanvil/eslint-plugin": "^0.0.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "globals": "^15.14.0"
+    "prettier-plugin-packagejson": "^2.5.7"
   },
   "publishConfig": {
-    "@kanvil:registry": "https://registry.npmjs.org",
+    "@fmss:registry": "https://registry.npmjs.org",
     "access": "public"
   }
 }
