@@ -14,7 +14,7 @@
     "prepare": "husky",
     "prettier:check": "prettier --check .",
     "release": "changeset publish",
-    "test": "jest --runInBand"
+    "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --runInBand"
   },
   "lint-staged": {
     "*": "prettier -w --ignore-unknown"
