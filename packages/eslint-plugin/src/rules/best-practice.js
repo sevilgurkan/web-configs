@@ -29,7 +29,7 @@ module.exports = {
      *
      * 🔧 Fixable - https://eslint.org/docs/rules/eqeqeq
      */
-    eqeqeq: 'error',
+    eqeqeq: ['error', 'always', {null: 'ignore'}],
     /**
      * Require grouped accessor pairs in object literals and classes.
      *
@@ -203,7 +203,7 @@ module.exports = {
      *
      * 🚫 Not fixable - https://eslint.org/docs/rules/prefer-named-capture-group
      */
-    'prefer-named-capture-group': 'error',
+    'prefer-named-capture-group': 'off',
     /**
      * Require using Error objects as Promise rejection reasons.
      *
