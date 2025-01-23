@@ -2,3 +2,4 @@ templates/**/*
 node_modules
 packages/eslint-plugin/src/docs/rules/**/*.md
 package.json
+*.md
