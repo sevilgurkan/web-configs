@@ -9,6 +9,7 @@ export default createConfig({
     'typescript',
     'plop',
     'commitlint-plugin',
+    'babel-preset',
   ],
   ignores: [(commit) => commit.includes('Version Packages')],
 });
