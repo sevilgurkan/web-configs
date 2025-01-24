@@ -13,8 +13,8 @@ module.exports = [
       'prettier/prettier': 'error',
 
       // rules to disable to prefer prettier
-      // '@shopify/class-property-semi': 'off',
-      // '@shopify/binary-assignment-parens': 'off',
+      '@fmss/class-property-semi': 'off',
+      '@fmss/binary-assignment-parens': 'off',
       'prefer-arrow-callback': 'off',
       'arrow-body-style': 'off',
 

@@ -1,6 +1,6 @@
 const globals = require('globals');
 const promisePlugin = require('eslint-plugin-promise');
-// const importPlugin = require('eslint-plugin-import');
+const importPlugin = require('eslint-plugin-import');
 const sortClassMembersPlugin = require('eslint-plugin-sort-class-members');
 
 const kanvilCoreConfig = require('./core');
@@ -26,7 +26,7 @@ module.exports = [
     plugins: {
       promise: promisePlugin,
       'sort-class-members': sortClassMembersPlugin,
-      // import: importPlugin,
+      import: importPlugin,
     },
 
     rules: {
@@ -95,7 +95,7 @@ module.exports = [
 
       /* * * * * * * * * * * * *
        *                       *
-       *      Promise      *
+       *      Promise          *
        *                       *
        * * * * * * * * * * * * */
 

@@ -1,4 +1,5 @@
 module.exports = {
+  ...require('./plugin'),
   configs: {
     // Core configs - When extending, one of these should go first
     core: require('./config/core'),

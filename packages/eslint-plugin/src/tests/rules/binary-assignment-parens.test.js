@@ -155,8 +155,7 @@ const invalidBooleanExamples = [].concat(
 function errors(count, needsParens) {
   const err = [];
 
-  // eslint-disable-next-line no-var
-  for (var index = 0; index < count; index++) {
+  for (let index = 0; index < count; index++) {
     err.push({
       type: 'BinaryExpression',
       message: needsParens

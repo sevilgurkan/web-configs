@@ -5,7 +5,8 @@ module.exports = {
      *
      * 🚫 Not fixable -https://eslint.org/docs/rules/array-callback-return
      */
-    'array-callback-return': ['error', {allowImplicit: true}],
+    // 'array-callback-return': ['error', {allowImplicit: true}],
+    'array-callback-return': 'error',
     /**
      * Treat `var` statements as if they were block scoped.
      *
@@ -13,11 +14,11 @@ module.exports = {
      */
     'block-scoped-var': 'error',
     /**
-     * Require curly braces for multiline blocks.
+     * Specify curly brace conventions for all control statements.
      *
      * 🔧 Fixable - https://eslint.org/docs/rules/curly
      */
-    curly: ['warn', 'multi-line'],
+    curly: ['error', 'all'],
     /**
      * Require default clauses in switch statements to be last (if used).
      *
@@ -113,7 +114,7 @@ module.exports = {
      *
      * 🚫 Not fixable - https://eslint.org/docs/rules/no-labels
      */
-    'no-labels': ['error'],
+    'no-labels': 'error',
     /**
      * Disallow unnecessary nested blocks.
      *
@@ -197,7 +198,7 @@ module.exports = {
      *
      * 🔧 Fixable - https://eslint.org/docs/rules/no-useless-return
      */
-    'no-useless-return': 'warn',
+    'no-useless-return': 'error',
     /**
      * Require using named capture groups in regular expressions.
      *
@@ -222,6 +223,289 @@ module.exports = {
      *
      * 🔧 Fixable - https://eslint.org/docs/rules/yoda
      */
-    yoda: 'warn',
+    yoda: ['error', 'never'],
+
+    //  V
+    // ***********
+    //  S
+
+    /**
+     * Enforces getter/setter pairs in objects.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/accessor-pairs
+     */
+    'accessor-pairs': 'off',
+    /**
+     * Enforces return statements in callbacks of array's methods.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/array-callback-return
+     */
+    'array-callback-return': 'error',
+    /**
+     * Enforce that class methods utilize this.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/class-methods-use-this
+     */
+    'class-methods-use-this': 'off',
+    /**
+     * Specify the maximum cyclomatic complexity allowed in a program.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/complexity
+     */
+    complexity: 'off',
+    /**
+     * Require return statements to either always or never specify values.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/consistent-return
+     */
+    'consistent-return': 'error',
+
+    /**
+     * Require default case in switch statements.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/default-case
+     */
+    'default-case': 'off',
+    /**
+     * Encourages use of dot notation whenever possible.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/dot-notation
+     */
+    'dot-notation': ['error', {allowKeywords: true}],
+    /**
+     * Enforces consistent newlines before or after dots.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/dot-location
+     */
+    'dot-location': ['error', 'property'],
+
+    /**
+     * Make sure for-in loops have an if statement.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/guard-for-in
+     */
+    'guard-for-in': 'error',
+    /**
+     * Enforce a maximum number of classes per file.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/max-classes-per-file
+     */
+    'max-classes-per-file': 'off',
+
+    /**
+     * Disallow lexical declarations in case clauses.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-case-declarations
+     */
+    'no-case-declarations': 'error',
+    /**
+     * Disallow division operators explicitly at beginning of regular expression.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-div-regex
+     */
+    'no-div-regex': 'error',
+
+    /**
+     * Disallow use of empty functions.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-empty-function
+     */
+    'no-empty-function': 'error',
+    /**
+     * Disallow use of empty destructuring patterns.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-empty-pattern
+     */
+    'no-empty-pattern': 'error',
+    /**
+     * Disallow comparisons to null without a type-checking operator.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-eq-null
+     */
+    'no-eq-null': 'off',
+
+    /**
+     * Disallow fallthrough of case statements.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-fallthrough
+     */
+    'no-fallthrough': 'error',
+
+    /**
+     * Disallow reassignments of native objects.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-global-assign
+     */
+    'no-global-assign': 'error',
+
+    /**
+     * Disallow var and named functions in global scope.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-implicit-globals
+     */
+    'no-implicit-globals': 'error',
+
+    /**
+     * Disallow this keywords outside of classes or class-like objects.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-invalid-this
+     */
+    'no-invalid-this': 'off',
+
+    /**
+     * Disallow creation of functions within loops.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-loop-func
+     */
+    'no-loop-func': 'error',
+    /**
+     * Disallow the use of magic numbers.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/no-magic-numbers
+     */
+    'no-magic-numbers': 'off',
+    /**
+     * Disallow use of multiple spaces.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-multi-spaces
+     */
+    'no-multi-spaces': 'error',
+    /**
+     * Disallow use of multiline strings.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/no-multi-str
+     */
+    'no-multi-str': 'off',
+
+    /**
+     * Disallow use of octal literals.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-octal
+     */
+    'no-octal': 'error',
+    /**
+     * Allow reassignment of function parameters.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-param-reassign
+     */
+    'no-param-reassign': 'off',
+    /**
+     * Disallow use of process.env.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-process-env
+     */
+    'no-process-env': 'error',
+
+    /**
+     * Disallow declaring the same variable more than once.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-redeclare
+     */
+    'no-redeclare': 'error',
+    /**
+     * Disallow certain object properties.
+     *
+     * 🚫 Not fixable - https://eslint.org/docs/rules/no-restricted-properties
+     */
+    'no-restricted-properties': 'off',
+
+    /**
+     * Disallow unnecessary return await.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-return-await
+     */
+    'no-return-await': 'error',
+
+    /**
+     * Disallow assignments where both sides are exactly the same.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-self-assign
+     */
+    'no-self-assign': ['error', {props: true}],
+    /**
+     * Restrict what can be thrown as an exception.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-throw-literal
+     */
+    'no-throw-literal': 'error',
+    /**
+     * Disallow unmodified conditions of loops.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-unmodified-loop-condition
+     */
+    'no-unmodified-loop-condition': 'error',
+    /**
+     * Disallow usage of expressions in statement position.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-unused-expressions
+     */
+    'no-unused-expressions': 'error',
+    /**
+     * Disallow unused labels.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-unused-labels
+     */
+    'no-unused-labels': 'error',
+    /**
+     * Disallow unnecessary catch clauses.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-useless-catch
+     */
+    'no-useless-catch': 'error',
+    /**
+     * Disallow unnecessary usage of escape character.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-useless-escape
+     */
+    'no-useless-escape': 'error',
+    /**
+     * Disallow use of void operator.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-void
+     */
+    'no-void': 'error',
+    /**
+     * Disallow usage of configurable warning terms in comments.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-warning-comments
+     */
+    'no-warning-comments': 'error',
+    /**
+     * Disallow use of the with statement.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/no-with
+     */
+    'no-with': 'error',
+
+    /**
+     * Require use of the second argument for parseInt().
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/radix
+     */
+    radix: 'error',
+    /**
+     * Disallow async functions which have no await expression.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/require-await
+     */
+    'require-await': 'error',
+    /**
+     * Enforce the use of u flag on RegExp.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/require-unicode-regexp
+     */
+    'require-unicode-regexp': 'off',
+    /**
+     * Requires to declare all vars on top of their containing scope.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/vars-on-top
+     */
+    'vars-on-top': 'off',
+    /**
+     * Require immediate function invocation to be wrapped in parentheses.
+     *
+     * 🔧 Fixable - https://eslint.org/docs/rules/wrap-iife
+     */
+    'wrap-iife': ['error', 'inside'],
   },
 };
