@@ -1,0 +1,29 @@
+{
+  "name": "@fmss/babel-preset",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "FMSS's Babel preset configuration",
+  "main": "index.js",
+  "author": "Gürkan Sevil",
+  "publishConfig": {
+    "access": "public",
+    "@fmss:registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevilgurkan/web-configs.git",
+    "directory": "packages/babel-preset"
+  },
+  "bugs": {
+    "url": "https://github.com/sevilgurkan/web-configs/issues"
+  },
+  "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/babel-preset/README.md",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/runtime": "^7.16.3"
+  }
+}
