@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](../../LICENSE.md) [![npm version](https://badge.fury.io/js/%40fmss%2Fcommitlint-plugin.svg)](https://badge.fury.io/js/%40fmss%2Fcommitlint-plugin.svg)
 
-FMSS's commitlint plugin and configuration.
+Commitlint plugin for enforcing consistent commit message conventions and rules
 
 ## Installation
 
