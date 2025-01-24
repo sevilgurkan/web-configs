@@ -1,7 +1,7 @@
 {
   "name": "@fmss/typescript-config",
   "version": "1.0.0",
-  "description": "Typescript config",
+  "description": "FMSS TypeScript configuration files for extending",
   "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/typescript-config/README.md",
   "bugs": {
     "url": "https://github.com/sevilgurkan/web-configs/issues"
