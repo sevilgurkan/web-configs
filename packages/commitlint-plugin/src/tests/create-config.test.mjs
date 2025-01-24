@@ -1,6 +1,12 @@
-import {createConfig} from '../utils.mjs';
 import {RuleConfigSeverity} from '@commitlint/types';
-import {baseConfig, baseRules, jiraRulesWithOverrides, fmssCommitlintPlugin} from '../config.mjs';
+
+import {createConfig} from '../utils.mjs';
+import {
+  baseConfig,
+  baseRules,
+  jiraRulesWithOverrides,
+  fmssCommitlintPlugin,
+} from '../config.mjs';
 
 describe('createConfig utility', () => {
   describe('default configuration', () => {
@@ -49,15 +55,21 @@ describe('createConfig utility', () => {
 
       const [_severity, _condition, types] = config.rules['type-enum'];
       const originalTypes = baseRules['type-enum'][2];
-      expect(types).toEqual(expect.arrayContaining([...originalTypes, ...customTypes]));
+      expect(types).toEqual(
+        expect.arrayContaining([...originalTypes, ...customTypes]),
+      );
     });
 
     it('should throw an error when additionalTypes is not an array', () => {
-      expect(() => createConfig({additionalTypes: 'not an array'})).toThrow('additionalTypes must be an array');
+      expect(() => createConfig({additionalTypes: 'not an array'})).toThrow(
+        'additionalTypes must be an array',
+      );
     });
 
     it('should throw an error when additionalTypes is not an array of strings', () => {
-      expect(() => createConfig({additionalTypes: [1, 2, 3]})).toThrow('additionalTypes must be an array of strings');
+      expect(() => createConfig({additionalTypes: [1, 2, 3]})).toThrow(
+        'additionalTypes must be an array of strings',
+      );
     });
   });
 
@@ -80,11 +92,15 @@ describe('createConfig utility', () => {
     });
 
     it('should throw an error when additionalScopes is not an array', () => {
-      expect(() => createConfig({additionalScopes: 'not an array'})).toThrow('additionalScopes must be an array');
+      expect(() => createConfig({additionalScopes: 'not an array'})).toThrow(
+        'additionalScopes must be an array',
+      );
     });
 
     it('should throw an error when additionalScopes is not an array of strings', () => {
-      expect(() => createConfig({additionalScopes: [1, 2, 3]})).toThrow('additionalScopes must be an array of strings');
+      expect(() => createConfig({additionalScopes: [1, 2, 3]})).toThrow(
+        'additionalScopes must be an array of strings',
+      );
     });
   });
 
@@ -98,13 +114,18 @@ describe('createConfig utility', () => {
 
       const config = createConfig(options);
 
-      expect(config.rules).toEqual(expect.objectContaining({...baseRules, ...jiraRulesWithOverrides}));
+      expect(config.rules).toEqual(
+        expect.objectContaining({...baseRules, ...jiraRulesWithOverrides}),
+      );
       expect(config.plugins).toEqual([fmssCommitlintPlugin]);
 
       const [_typeSeverity, _typeCondition, types] = config.rules['type-enum'];
-      expect(types).toEqual(expect.arrayContaining([...baseRules['type-enum'][2], 'custom']));
+      expect(types).toEqual(
+        expect.arrayContaining([...baseRules['type-enum'][2], 'custom']),
+      );
 
-      const [_scopeSeverity, _scopeCondition, scopes] = config.rules['scope-enum'];
+      const [_scopeSeverity, _scopeCondition, scopes] =
+        config.rules['scope-enum'];
       expect(scopes).toEqual(expect.arrayContaining(['app']));
     });
   });
@@ -128,7 +149,9 @@ describe('createConfig utility', () => {
     });
 
     it('should throw error when ignores is not an array', () => {
-      expect(() => createConfig({ignores: 'not an array'})).toThrow('ignores must be an array');
+      expect(() => createConfig({ignores: 'not an array'})).toThrow(
+        'ignores must be an array',
+      );
     });
 
     it('should throw error when ignore items are not functions', () => {
@@ -143,7 +166,9 @@ describe('createConfig utility', () => {
       const invalidIgnores = [
         (message) => message,
         (message) => 1,
-        (message) => {},
+        (message) => {
+          return {};
+        },
         (message) => undefined,
         (message) => null,
         (message) => [],

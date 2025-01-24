@@ -28,7 +28,9 @@ const fmssCommitlintPlugin = {
 
       const allIssueKeys = parsed.subject.match(anyIssueKeyRegex) || [];
 
-      const hasNonJiraPrefix = allIssueKeys.some((key) => !isJiraHeaderRegex.test(key));
+      const hasNonJiraPrefix = allIssueKeys.some(
+        (key) => !isJiraHeaderRegex.test(key),
+      );
 
       if (hasNonJiraPrefix) {
         return [
@@ -38,10 +40,14 @@ const fmssCommitlintPlugin = {
       }
 
       const isValid =
-        parsed.references.length > 0 &&
-        parsed.references.every((ref) => {
-          return isJiraHeaderRegex.test(ref.prefix) && isNumberRegex.test(ref.issue);
-        });
+        (parsed.references.length > 0 &&
+          parsed.references.every((ref) => {
+            return (
+              isJiraHeaderRegex.test(ref.prefix) &&
+              isNumberRegex.test(ref.issue)
+            );
+          })) ||
+        allIssueKeys.length > 0;
 
       return [
         isValid,
@@ -57,7 +63,21 @@ const baseRules = {
   'type-enum': [
     RuleConfigSeverity.Error,
     'always',
-    ['chore', 'build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test', 'release', 'ops'],
+    [
+      'chore',
+      'build',
+      'ci',
+      'docs',
+      'feat',
+      'fix',
+      'perf',
+      'refactor',
+      'revert',
+      'style',
+      'test',
+      'release',
+      'ops',
+    ],
   ],
   'scope-empty': [RuleConfigSeverity.Warning, 'never'],
   'scope-case': [RuleConfigSeverity.Error, 'never', ['upper-case']],
@@ -71,7 +91,11 @@ const baseRules = {
 /** @type {import('@commitlint/types').RulesConfig} */
 const jiraRulesWithOverrides = {
   'subject-case': [RuleConfigSeverity.Disabled],
-  'fmss/subject-case-with-jira-key': [RuleConfigSeverity.Error, 'never', ['upper-case']],
+  'fmss/subject-case-with-jira-key': [
+    RuleConfigSeverity.Error,
+    'never',
+    ['upper-case'],
+  ],
   'fmss/jira-task': [RuleConfigSeverity.Error, 'always'],
   'references-empty': [RuleConfigSeverity.Error, 'never'],
 };
@@ -83,7 +107,8 @@ const baseParserPreset = {
     issuePrefixesCaseSensitive: true,
     referenceActions: null,
     noteKeywords: null,
-    revertPattern: /^(?:Revert|revert:)\s"?([\s\S]+?)"?\s*This reverts commit (\w*)\./i,
+    revertPattern:
+      /^(?:Revert|revert:)\s"?([\s\S]+?)"?\s*This reverts commit (\w*)\./i,
     revertCorrespondence: ['header', 'hash'],
     fieldPattern: /^-(.*?)-$/,
     headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
@@ -95,8 +120,15 @@ const baseParserPreset = {
 /** @type {import('@commitlint/types').UserConfig} */
 const baseConfig = {
   extends: ['@commitlint/config-conventional'],
-  helpUrl: 'https://github.com/sevilgurkan/web-configs/blob/main/packages/commitlint-plugin/README.md',
+  helpUrl:
+    'https://github.com/sevilgurkan/web-configs/blob/main/packages/commitlint-plugin/README.md',
   parserPreset: baseParserPreset,
 };
 
-export {baseConfig, baseRules, baseParserPreset, jiraRulesWithOverrides, fmssCommitlintPlugin};
+export {
+  baseConfig,
+  baseRules,
+  baseParserPreset,
+  jiraRulesWithOverrides,
+  fmssCommitlintPlugin,
+};

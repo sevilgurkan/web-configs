@@ -1,5 +1,11 @@
 import {RuleConfigSeverity} from '@commitlint/types';
-import {baseConfig, baseRules, jiraRulesWithOverrides, fmssCommitlintPlugin} from './config.mjs';
+
+import {
+  baseConfig,
+  baseRules,
+  jiraRulesWithOverrides,
+  fmssCommitlintPlugin,
+} from './config.mjs';
 
 const getValidatedArrayOfStrings = (array, fieldName) => {
   if (!Array.isArray(array)) {
@@ -16,10 +22,16 @@ const getValidatedArrayOfStrings = (array, fieldName) => {
 const createTypeEnumRule = (baseItems, additionalItems = []) => {
   if (additionalItems.length === 0) return baseItems;
 
-  return [...baseItems, ...getValidatedArrayOfStrings(additionalItems, 'additionalTypes')];
+  return [
+    ...baseItems,
+    ...getValidatedArrayOfStrings(additionalItems, 'additionalTypes'),
+  ];
 };
 
-const extendRules = (rules, {requireJira = false, additionalTypes = [], additionalScopes = []}) => {
+const extendRules = (
+  rules,
+  {requireJira = false, additionalTypes = [], additionalScopes = []},
+) => {
   if (rules['type-enum']) {
     const typeRule = rules['type-enum'];
     typeRule[2] = createTypeEnumRule(typeRule[2], additionalTypes);
@@ -53,7 +65,9 @@ const checkAllIgnoreFnsValid = (ignores) => {
   });
 
   if (!isValid) {
-    throw new Error('All ignore functions must take a string parameter and return a boolean');
+    throw new Error(
+      'All ignore functions must take a string parameter and return a boolean',
+    );
   }
 
   return ignores;
@@ -69,11 +83,22 @@ const checkAllIgnoreFnsValid = (ignores) => {
  * @param {((message: string) => boolean)[]} [options.ignores=[]] - Array of functions that take a commit message as a parameter and return a boolean. If any function returns true, all other rules will be skipped for that commit message
  * @returns {import('@commitlint/types').UserConfig} Commitlint configuration
  */
-export const createConfig = ({requireJira = false, additionalTypes = [], additionalScopes = [], ignores} = {}) => {
-  const rules = requireJira ? {...baseRules, ...jiraRulesWithOverrides} : {...baseRules};
+export const createConfig = ({
+  requireJira = false,
+  additionalTypes = [],
+  additionalScopes = [],
+  ignores,
+} = {}) => {
+  const rules = requireJira
+    ? {...baseRules, ...jiraRulesWithOverrides}
+    : {...baseRules};
   const plugins = requireJira ? [fmssCommitlintPlugin] : [];
 
-  const extendedRules = extendRules(rules, {requireJira, additionalTypes, additionalScopes});
+  const extendedRules = extendRules(rules, {
+    requireJira,
+    additionalTypes,
+    additionalScopes,
+  });
 
   const validIgnores = ignores ? checkAllIgnoreFnsValid(ignores) : [];
 
