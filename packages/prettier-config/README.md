@@ -12,7 +12,7 @@ $ npm install @fmss/prettier-config
 
 ## Usage
 
-FMSS’s shared prettier config comes bundled in `@fmss/prettier-config`. To enable these rules, add a `prettier` property in your `package.json` and reference this shared config as follows:
+To enable these rules, add a `prettier` property in your `package.json` and reference this shared config as follows:
 
 ```
 "prettier": "@fmss/prettier-config"
