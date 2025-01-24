@@ -1,7 +1,7 @@
 {
   "name": "@fmss/prettier-config",
   "version": "1.0.0",
-  "description": "Prettier config",
+  "description": "FMSS's shared prettier config",
   "keywords": [
     "prettier",
     "config"
