@@ -3,10 +3,12 @@ const config = {
   // collectCoverage: true,
   // coverageDirectory: 'coverage',
   // coverageProvider: 'v8',
-  moduleFileExtensions: ['js', 'ts', 'jsx', 'tsx', 'json'],
+  moduleFileExtensions: ['js', 'mjs', 'ts', 'jsx', 'tsx', 'json'],
   testPathIgnorePatterns: ['.*/tests/fixtures/'],
-  testRegex: '.*\\.test\\.(tsx?|jsx?)$',
+  testRegex: '.*\\.test\\.(mjs?|tsx?|jsx?)$',
   watchPathIgnorePatterns: ['<rootDir>/node_modules/'],
+  verbose: false,
+  setupFilesAfterEnv: ['jest-expect-message'],
 };
 
 module.exports = config;
