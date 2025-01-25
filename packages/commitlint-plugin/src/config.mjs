@@ -1,5 +1,10 @@
-import {RuleConfigSeverity} from '@commitlint/types';
 import rules from '@commitlint/rules';
+
+export const SEVERITY = {
+  Disabled: 0,
+  Warning: 1,
+  Error: 2,
+};
 
 /** @type {import('@commitlint/types').Plugin} */
 const fmssCommitlintPlugin = {
@@ -59,9 +64,9 @@ const fmssCommitlintPlugin = {
 
 /** @type {import('@commitlint/types').RulesConfig} */
 const baseRules = {
-  'type-empty': [RuleConfigSeverity.Error, 'never'],
+  'type-empty': [SEVERITY.Error, 'never'],
   'type-enum': [
-    RuleConfigSeverity.Error,
+    SEVERITY.Error,
     'always',
     [
       'chore',
@@ -79,25 +84,21 @@ const baseRules = {
       'ops',
     ],
   ],
-  'scope-empty': [RuleConfigSeverity.Warning, 'never'],
-  'scope-case': [RuleConfigSeverity.Error, 'never', ['upper-case']],
-  'subject-empty': [RuleConfigSeverity.Error, 'never'],
-  'subject-case': [RuleConfigSeverity.Error, 'never', ['upper-case']],
-  'body-leading-blank': [RuleConfigSeverity.Error, 'always'],
-  'body-case': [RuleConfigSeverity.Error, 'never', ['upper-case']],
-  'body-full-stop': [RuleConfigSeverity.Error, 'never'],
+  'scope-empty': [SEVERITY.Warning, 'never'],
+  'scope-case': [SEVERITY.Error, 'never', ['upper-case']],
+  'subject-empty': [SEVERITY.Error, 'never'],
+  'subject-case': [SEVERITY.Error, 'never', ['upper-case']],
+  'body-leading-blank': [SEVERITY.Error, 'always'],
+  'body-case': [SEVERITY.Error, 'never', ['upper-case']],
+  'body-full-stop': [SEVERITY.Error, 'never'],
 };
 
 /** @type {import('@commitlint/types').RulesConfig} */
 const jiraRulesWithOverrides = {
-  'subject-case': [RuleConfigSeverity.Disabled],
-  'fmss/subject-case-with-jira-key': [
-    RuleConfigSeverity.Error,
-    'never',
-    ['upper-case'],
-  ],
-  'fmss/jira-task': [RuleConfigSeverity.Error, 'always'],
-  'references-empty': [RuleConfigSeverity.Error, 'never'],
+  'subject-case': [SEVERITY.Disabled],
+  'fmss/subject-case-with-jira-key': [SEVERITY.Error, 'never', ['upper-case']],
+  'fmss/jira-task': [SEVERITY.Error, 'always'],
+  'references-empty': [SEVERITY.Error, 'never'],
 };
 
 /** @type {import('@commitlint/types').UserConfig['parserPreset']} */

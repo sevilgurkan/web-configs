@@ -269,165 +269,165 @@ describe('FMSS Commitlint Plugin', () => {
 
   describe('Commit Message Validation without Required JIRA', () => {
     describe('Valid Commits', () => {
-      it('should pass for basic valid commit messages', async () => {
+      it('pass for basic valid commit messages', async () => {
         for (const message of messages.withoutJira.valid.basic) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
 
-      it('should pass for commit messages with scope', async () => {
+      it('pass for commit messages with scope', async () => {
         for (const message of messages.withoutJira.valid.withScope) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
 
-      it('should pass for commit messages with body', async () => {
+      it('pass for commit messages with body', async () => {
         for (const message of messages.withoutJira.valid.withBody) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
 
-      it('should pass for commit messages with footer', async () => {
+      it('pass for commit messages with footer', async () => {
         for (const message of messages.withoutJira.valid.withFooter) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
 
-      it('should pass for commit messages with both body and footer', async () => {
+      it('pass for commit messages with both body and footer', async () => {
         for (const message of messages.withoutJira.valid.withBodyAndFooter) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
     });
 
     describe('Invalid Commits', () => {
-      it('should fail for invalid commit types', async () => {
+      it('fail for invalid commit types', async () => {
         for (const message of messages.withoutJira.invalid.invalidType) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for invalid commit format', async () => {
+      it('fail for invalid commit format', async () => {
         for (const message of messages.withoutJira.invalid.invalidFormat) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for invalid scope format', async () => {
+      it('fail for invalid scope format', async () => {
         for (const message of messages.withoutJira.invalid.invalidScope) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for uppercase subject', async () => {
+      it('fail for uppercase subject', async () => {
         for (const message of messages.withoutJira.invalid.invalidSubjectCase) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for invalid body format', async () => {
+      it('fail for invalid body format', async () => {
         for (const message of messages.withoutJira.invalid
           .invalidBodyLeadingBlank) {
           const result = await commitLint(message);
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
 
-      it('should fail for body ending with period', async () => {
+      it('fail for body ending with period', async () => {
         const message = messages.withoutJira.invalid.invalidBodyFullStop[0];
         const result = await commitLint(message);
-        expect(result.valid, result.errorMessages).toBe(false);
+        expect(result.valid).toBe(false);
       });
     });
   });
 
   describe('Commit Message Validation with Required JIRA', () => {
     describe('Valid Commits', () => {
-      it('should pass for valid commit messages with single JIRA reference', async () => {
+      it('pass for valid commit messages with single JIRA reference', async () => {
         for (const message of messages.withJira.valid.singleReference) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
-      it('should pass for valid commit messages with multiple JIRA references', async () => {
+      it('pass for valid commit messages with multiple JIRA references', async () => {
         for (const message of messages.withJira.valid.multipleReferences) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
-      it('should pass for valid commit messages with scope and JIRA reference', async () => {
+      it('pass for valid commit messages with scope and JIRA reference', async () => {
         for (const message of messages.withJira.valid.withScope) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
-      it('should pass for valid commit messages with body', async () => {
+      it('pass for valid commit messages with body', async () => {
         for (const message of messages.withJira.valid.withBody) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
-      it('should pass for valid commit messages with footer', async () => {
+      it('pass for valid commit messages with footer', async () => {
         for (const message of messages.withJira.valid.withFooter) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
-      it('should pass for valid commit messages with both body and footer', async () => {
+      it('pass for valid commit messages with both body and footer', async () => {
         for (const message of messages.withJira.valid.withBodyAndFooter) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(true);
+          expect(result.valid).toBe(true);
         }
       });
     });
     describe('Invalid Commits', () => {
-      it('should fail for commit messages without JIRA reference', async () => {
+      it('fail for commit messages without JIRA reference', async () => {
         for (const message of messages.withJira.invalid.invalidJiraReference) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for commit messages with invalid JIRA prefix', async () => {
+      it('fail for commit messages with invalid JIRA prefix', async () => {
         for (const message of messages.withJira.invalid.invalidJiraPrefix) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for commit messages with invalid JIRA format', async () => {
+      it('fail for commit messages with invalid JIRA format', async () => {
         for (const message of messages.withJira.invalid.invalidJiraFormat) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for commit messages with uppercase subject after JIRA reference', async () => {
+      it('fail for commit messages with uppercase subject after JIRA reference', async () => {
         for (const message of messages.withJira.invalid.invalidSubjectCase) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
-      it('should fail for commit messages with invalid body format', async () => {
+      it('fail for commit messages with invalid body format', async () => {
         for (const message of messages.withJira.invalid
           .invalidBodyLeadingBlank) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
 
-      it('should fail for body ending with period with JIRA reference', async () => {
+      it('fail for body ending with period with JIRA reference', async () => {
         const message = messages.withJira.invalid.invalidBodyFullStop[0];
         const result = await commitLint(message, {requireJira: true});
-        expect(result.valid, result.errorMessages).toBe(false);
+        expect(result.valid).toBe(false);
       });
 
-      it('should fail for commit messages with mixed issue prefixes', async () => {
+      it('fail for commit messages with mixed issue prefixes', async () => {
         for (const message of messages.withJira.invalid.invalidMixedPrefixes) {
           const result = await commitLint(message, {requireJira: true});
-          expect(result.valid, result.errorMessages).toBe(false);
+          expect(result.valid).toBe(false);
         }
       });
     });

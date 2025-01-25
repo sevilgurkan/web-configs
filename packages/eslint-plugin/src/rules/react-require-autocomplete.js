@@ -1,4 +1,5 @@
 const {hasProp, getProp, getPropValue} = require('jsx-ast-utils');
+
 const {docsUrl} = require('../utilities');
 
 const autoCompleteInputTypes = [

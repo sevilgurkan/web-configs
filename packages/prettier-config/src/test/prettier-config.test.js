@@ -2,55 +2,55 @@ const prettierConfig = require('../index');
 
 describe('prettier-config', () => {
   describe('overridable defaults', () => {
-    it('should have correct endOfLine setting', () => {
+    it('have endOfLine setting', () => {
       expect(prettierConfig.endOfLine).toBe('lf');
     });
 
-    it('should have correct tabWidth setting', () => {
+    it('have tabWidth setting', () => {
       expect(prettierConfig.tabWidth).toBe(2);
     });
 
-    it('should have correct printWidth setting', () => {
+    it('have printWidth setting', () => {
       expect(prettierConfig.printWidth).toBe(80);
     });
 
-    it('should have correct useTabs setting', () => {
+    it('have useTabs setting', () => {
       expect(prettierConfig.useTabs).toBe(false);
     });
   });
 
   describe('main configuration', () => {
-    it('should have correct singleQuote setting', () => {
+    it('have singleQuote setting', () => {
       expect(prettierConfig.singleQuote).toBe(true);
     });
 
-    it('should have correct arrowParens setting', () => {
+    it('have arrowParens setting', () => {
       expect(prettierConfig.arrowParens).toBe('always');
     });
 
-    it('should have correct trailingComma setting', () => {
+    it('have trailingComma setting', () => {
       expect(prettierConfig.trailingComma).toBe('all');
     });
 
-    it('should have correct bracketSpacing setting', () => {
+    it('have bracketSpacing setting', () => {
       expect(prettierConfig.bracketSpacing).toBe(false);
     });
 
-    it('should have correct bracketSameLine setting', () => {
+    it('have bracketSameLine setting', () => {
       expect(prettierConfig.bracketSameLine).toBe(true);
     });
 
-    it('should have correct semi setting', () => {
+    it('have semi setting', () => {
       expect(prettierConfig.semi).toBe(true);
     });
   });
 
   describe('plugins', () => {
-    it('should include prettier-plugin-packagejson', () => {
+    it('include prettier-plugin-packagejson', () => {
       expect(prettierConfig.plugins).toContain('prettier-plugin-packagejson');
     });
 
-    it('should have exactly one plugin configured', () => {
+    it('have exactly one plugin configured', () => {
       expect(prettierConfig.plugins).toHaveLength(1);
     });
   });
