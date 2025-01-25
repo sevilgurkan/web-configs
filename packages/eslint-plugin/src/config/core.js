@@ -5,19 +5,20 @@ const fmssPlugin = require('../plugin');
 const {OFF, ERROR} = require('../utilities');
 
 const commentsConfig = require('./comments');
+const importConfig = require('./import');
 
 /** @type {import('eslint').Linter.Config[]} */
 module.exports = [
   // eslintJs.configs.recommended,
   // importPlugin.flatConfigs.recommended,
   ...commentsConfig,
+  ...importConfig,
   {
     plugins: {
       '@fmss': fmssPlugin,
     },
     rules: {
-      ...require('../rules/best-practice').rules,
-      ...require('../rules/import').rules,
+      ...require('./best-practice').rules,
     },
   },
   {

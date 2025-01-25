@@ -164,41 +164,58 @@ module.exports = [
       '@typescript-eslint/no-unsafe-function-type': 'error',
 
       // Enforce camelCase naming convention and PascalCase class and interface names
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'default',
-          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-          leadingUnderscore: 'allow',
-          trailingUnderscore: 'allow',
-        },
-        {
-          selector: 'default',
-          filter: {
-            match: true,
-            // Allow double underscores and React UNSAFE_ (for lifecycle hooks that are to be deprecated)
-            regex: '^(__|UNSAFE_).+$',
-          },
-          format: null,
-        },
-        {
-          selector: 'typeLike',
-          format: ['PascalCase'],
-        },
-        {
-          selector: 'typeParameter',
-          format: ['PascalCase'],
-          prefix: ['T'],
-        },
-        {
-          selector: 'interface',
-          format: ['PascalCase'],
-          custom: {
-            regex: '^I[A-Z]',
-            match: false,
-          },
-        },
-      ],
+      '@typescript-eslint/naming-convention': 'off',
+      // '@typescript-eslint/naming-convention': [
+      //   'error',
+      //   {
+      //     selector: 'default',
+      //     format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      //     leadingUnderscore: 'allow',
+      //     trailingUnderscore: 'allow',
+      //   },
+      //   {
+      //     selector: 'default',
+      //     filter: {
+      //       match: true,
+      //       // Allow double underscores and React UNSAFE_ (for lifecycle hooks that are to be deprecated)
+      //       regex: '^(__|UNSAFE_).+$',
+      //     },
+      //     format: null,
+      //   },
+      //   {
+      //     selector: 'typeLike',
+      //     format: ['PascalCase'],
+      //   },
+      //   {
+      //     selector: 'typeParameter',
+      //     format: ['PascalCase'],
+      //     prefix: ['T'],
+      //   },
+      //   {
+      //     selector: 'interface',
+      //     format: ['PascalCase'],
+      //     custom: {
+      //       regex: '^I[A-Z]',
+      //       match: false,
+      //     },
+      //   },
+      //   {
+      //     selector: 'variable',
+      //     types: ['boolean'],
+      //     format: ['PascalCase'],
+      //     prefix: ['is', 'should', 'has', 'can', 'did', 'will'],
+      //   },
+      //   {
+      //     selector: 'objectLiteralProperty',
+      //     format: [
+      //       'camelCase',
+      //       'PascalCase',
+      //       'UPPER_CASE',
+      //       'snake_case',
+      //       'kebab-case',
+      //     ],
+      //   },
+      // ],
       // Enforces naming of generic type variables
       '@typescript-eslint/generic-type-naming': 'off',
       // Enforce consistent indentation
@@ -335,7 +352,6 @@ module.exports = [
       'no-extra-parens': 'off',
       'no-empty-function': 'off',
       'func-call-spacing': 'off',
-      // '@shopify/no-fully-static-classes': 'off',
       'sort-class-members/sort-class-members': 'off',
       camelcase: 'off',
       'no-array-constructor': 'off',
@@ -359,18 +375,8 @@ module.exports = [
 
       // Breaks @typescript-eslint/parser
       strict: 'off',
-      // '@shopify/prefer-early-return': 'off',
       'array-callback-return': 'off',
       'getter-return': 'off',
-
-      // Prefer TypeScript enums be defined using Pascal case
-      // '@shopify/typescript-prefer-pascal-case-enums': 'error',
-
-      // Prefer TypeScript enums be defined using singular names
-      // '@shopify/typescript-prefer-singular-enums': 'error',
-
-      // Prefer buildClientSchema for schema building.
-      // '@shopify/typescript-prefer-build-client-schema': 'error',
     },
   },
 ];
