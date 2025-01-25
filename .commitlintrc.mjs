@@ -4,9 +4,9 @@ export default createConfig({
   requireJira: false,
   additionalScopes: [
     'deps',
-    'eslint',
-    'prettier',
-    'typescript',
+    'eslint-plugin',
+    'prettier-config',
+    'typescript-config',
     'plop',
     'commitlint-plugin',
     'babel-preset',
