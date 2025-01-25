@@ -1,4 +1,5 @@
 const {hasProp, getProp, getPropValue} = require('jsx-ast-utils');
+const {docsUrl} = require('../utilities');
 
 const autoCompleteInputTypes = [
   'color',
@@ -24,6 +25,7 @@ module.exports = {
       description: 'Require autocomplete attribute on certain input types.',
       category: 'Best Practices',
       recommended: true,
+      url: docsUrl('react-require-autocomplete'),
     },
     schema: {
       inputComponents: {

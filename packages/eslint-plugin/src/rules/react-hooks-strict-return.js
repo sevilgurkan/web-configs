@@ -9,7 +9,7 @@ module.exports = {
       description: 'Restrict the number of returned items from React hooks.',
       category: 'Best Practices',
       recommended: true,
-      uri: docsUrl('react-hooks-strict-return'),
+      url: docsUrl('react-hooks-strict-return'),
     },
     messages: {
       hooksStrictReturn:

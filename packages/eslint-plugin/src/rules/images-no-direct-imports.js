@@ -22,7 +22,7 @@ module.exports = {
         'Prefer importing image files from the index file of the directory instead of the direct path to the image file.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('images-no-direct-imports'),
+      url: docsUrl('images-no-direct-imports'),
     },
     fixable: null,
   },

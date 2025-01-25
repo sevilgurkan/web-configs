@@ -9,7 +9,7 @@ module.exports = {
         'Prefer early returns over full-body conditional wrapping in function declarations.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('prefer-early-return'),
+      url: docsUrl('prefer-early-return'),
     },
     schema: [
       {

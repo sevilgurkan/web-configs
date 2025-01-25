@@ -7,7 +7,7 @@ module.exports = {
       description: 'Prevent importing the entirety of a package.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('restrict-full-import'),
+      url: docsUrl('restrict-full-import'),
     },
     schema: [
       {

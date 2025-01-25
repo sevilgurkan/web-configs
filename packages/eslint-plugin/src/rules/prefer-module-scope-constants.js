@@ -8,7 +8,7 @@ module.exports = {
         'Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.',
       category: 'Best Practices',
       recommended: true,
-      uri: docsUrl('prefer-module-scope-constants'),
+      url: docsUrl('prefer-module-scope-constants'),
     },
     schema: [],
   },

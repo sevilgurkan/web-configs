@@ -6,7 +6,7 @@ module.exports = {
       description: 'Prevent the usage of unnecessary computed properties.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('no-useless-computed-properties'),
+      url: docsUrl('no-useless-computed-properties'),
     },
   },
 

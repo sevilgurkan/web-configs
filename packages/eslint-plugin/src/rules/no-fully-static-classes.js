@@ -7,7 +7,7 @@ module.exports = {
         'Prevent the declaration of classes consisting only of static members.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('no-fully-static-classes'),
+      url: docsUrl('no-fully-static-classes'),
     },
   },
 

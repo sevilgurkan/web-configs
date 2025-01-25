@@ -14,7 +14,7 @@ module.exports = {
       description: 'Disallow complex expressions embedded in in JSX.',
       category: 'Best Practices',
       recommended: true,
-      uri: docsUrl('jsx-no-complex-expressions'),
+      url: docsUrl('jsx-no-complex-expressions'),
     },
     schema: [],
   },

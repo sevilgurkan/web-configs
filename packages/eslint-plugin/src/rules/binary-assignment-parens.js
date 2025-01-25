@@ -15,7 +15,7 @@ module.exports = {
         'Enforce (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('binary-assignment-parens'),
+      url: docsUrl('binary-assignment-parens'),
     },
 
     schema: [

@@ -6,7 +6,7 @@ module.exports = {
       description: 'Prevent namespace import declarations.',
       category: 'Stylistic Issues',
       recommended: false,
-      uri: docsUrl('no-namespace-imports'),
+      url: docsUrl('no-namespace-imports'),
     },
     schema: [
       {
