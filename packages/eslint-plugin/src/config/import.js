@@ -15,7 +15,7 @@ module.exports = [
        *
        * 🚫 Not fixable - https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md
        */
-      'import/no-default-export': 'error',
+      'import/no-default-export': 'off',
       /**
        * Disallow the use of extraneous packages.
        *
