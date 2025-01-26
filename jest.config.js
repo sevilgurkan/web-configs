@@ -1,14 +1,11 @@
 /** @type {import('jest').Config} */
 const config = {
-  // collectCoverage: true,
-  // coverageDirectory: 'coverage',
-  // coverageProvider: 'v8',
-  moduleFileExtensions: ['js', 'mjs', 'ts', 'jsx', 'tsx', 'json'],
-  testPathIgnorePatterns: ['.*/tests/fixtures/'],
-  testRegex: '.*\\.test\\.(mjs?|tsx?|jsx?)$',
+  testEnvironment: 'node',
+  extensionsToTreatAsEsm: ['.mjs'],
+  moduleFileExtensions: ['js', 'ts', 'jsx', 'tsx', 'json'],
   watchPathIgnorePatterns: ['<rootDir>/node_modules/'],
-  verbose: false,
-  setupFilesAfterEnv: ['jest-expect-message'],
+  testRegex: '.*\\.test\\.(tsx?|jsx?)$',
+  verbose: true,
 };
 
-module.exports = config;
+export default config;

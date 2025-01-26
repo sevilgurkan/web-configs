@@ -1,4 +1,6 @@
 module.exports = {
-  targets: 'current node',
+  targets: {
+    node: 'current',
+  },
   presets: [['@fmss/babel-preset', {typescript: true}]],
 };
