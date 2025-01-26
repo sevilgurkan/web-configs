@@ -17,9 +17,20 @@
   },
   "license": "MIT",
   "author": "Gürkan Sevil",
+  "exports": {
+    ".": "./src/index.js"
+  },
   "main": "src/index.js",
+  "scripts": {
+    "eslint:check": "eslint --max-warnings=0 .",
+    "prettier:check": "prettier --check .",
+    "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --runInBand"
+  },
   "dependencies": {
     "prettier-plugin-packagejson": "^2.5.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   },
   "publishConfig": {
     "@fmss:registry": "https://registry.npmjs.org",

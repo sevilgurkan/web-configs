@@ -1,34 +1,38 @@
 {
   "name": "@fmss/commitlint-plugin",
   "version": "0.0.0",
-  "license": "MIT",
   "description": "Commitlint plugin for enforcing consistent commit message conventions and rules",
-  "main": "src/index.mjs",
-  "module": "src/index.mjs",
-  "type": "module",
-  "sideEffects": false,
-  "publishConfig": {
-    "access": "public",
-    "@fmss:registry": "https://registry.npmjs.org"
+  "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/commitlint-plugin/README.md",
+  "bugs": {
+    "url": "https://github.com/sevilgurkan/web-configs/issues"
   },
-  "author": "Gürkan Sevil",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sevilgurkan/web-configs.git",
     "directory": "packages/commitlint-plugin"
   },
-  "bugs": {
-    "url": "https://github.com/sevilgurkan/web-configs/issues"
-  },
-  "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/commitlint-plugin/README.md",
-  "peerDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0"
+  "license": "MIT",
+  "author": "Gürkan Sevil",
+  "sideEffects": false,
+  "type": "module",
+  "main": "src/index.mjs",
+  "module": "src/index.mjs",
+  "scripts": {
+    "eslint:check": "eslint --max-warnings=0 .",
+    "prettier:check": "prettier --check ."
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/lint": "^19.6.0",
     "@commitlint/rules": "^19.6.0",
     "@commitlint/types": "^19.5.0"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0"
+  },
+  "publishConfig": {
+    "@fmss:registry": "https://registry.npmjs.org",
+    "access": "public"
   }
 }
