@@ -1,6 +1,6 @@
 {
   "name": "@fmss/babel-preset",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "FMSS's Babel preset configuration",
   "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/babel-preset/README.md",
   "bugs": {

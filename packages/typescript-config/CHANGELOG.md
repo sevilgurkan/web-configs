@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- [`79e4f5a`](https://github.com/sevilgurkan/web-configs/commit/79e4f5aceccf100be1a299cf1268df7656087b06) Thanks [@sevilgurkan](https://github.com/sevilgurkan)! - Updated linting, formatting and typescript configurations with better defaults
+
 ## 1.0.0
 
 ### Major Changes
