@@ -1,10 +1,10 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
-    "jsx": "react",
-    "lib": ["dom", "dom.iterable", "scripthost", "es2020"],
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "scripthost", "es2022"],
     "module": "esnext",
-    "target": "es2020"
+    "target": "es2022"
   },
   "files": ["./definitions/images.d.ts", "./definitions/styles.d.ts"]
 }

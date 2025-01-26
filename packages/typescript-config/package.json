@@ -2,6 +2,11 @@
   "name": "@fmss/typescript-config",
   "version": "1.0.0",
   "description": "FMSS TypeScript configuration files for extending",
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "fmss"
+  ],
   "homepage": "https://github.com/sevilgurkan/web-configs/blob/main/packages/typescript-config/README.md",
   "bugs": {
     "url": "https://github.com/sevilgurkan/web-configs/issues"
@@ -13,13 +18,9 @@
   },
   "license": "MIT",
   "author": "Gürkan Sevil",
-  "exports": {
-    "./base": "./base.json",
-    "./dom": "./dom.json",
-    "./library": "./library.json",
-    "./node-base": "./node-base.json",
-    "./node-library": "./node-library.json"
-  },
+  "files": [
+    "*.json"
+  ],
   "publishConfig": {
     "@fmss:registry": "https://registry.npmjs.org",
     "access": "public"
