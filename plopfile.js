@@ -72,12 +72,13 @@ module.exports = function plopfile(plop) {
 
 function getPackageNames() {
   const packagesPath = path.join(__dirname, 'packages');
+
   return readdirSync(packagesPath).filter(hasPackageJson);
 
-  function hasPackageJson(directoryName) {
+  function hasPackageJson(packageName) {
     const packageJsonPath = path.join(
-      packagesRootPath,
-      directoryName,
+      packagesPath,
+      packageName,
       'package.json',
     );
     return existsSync(packageJsonPath);

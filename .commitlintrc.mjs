@@ -1,4 +1,4 @@
-import {createConfig} from '@fmss/commitlint-plugin';
+import {createConfig} from '@fmss/commitlint-config';
 
 export default createConfig({
   requireJira: false,
@@ -8,7 +8,6 @@ export default createConfig({
     'prettier-config',
     'typescript-config',
     'plop',
-    'commitlint-plugin',
     'babel-preset',
   ],
   ignores: [(commit) => commit.includes('Version Packages')],
