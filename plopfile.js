@@ -1,3 +1,8 @@
+const {readdirSync, existsSync} = require('fs');
+const path = require('path');
+
+const jsPackageNames = getPackageNames('js');
+
 /**
  * @param {import('plop').NodePlopAPI} plop
  */
@@ -25,7 +30,7 @@ module.exports = function plopfile(plop) {
       {
         type: 'add',
         path: 'packages/{{kebabCase name}}/README.md',
-        templateFile: 'templates/README.hbs.md',
+        templateFile: 'templates/PACKAGE_README.hbs.md',
       },
       {
         type: 'add',
@@ -49,4 +54,32 @@ module.exports = function plopfile(plop) {
       },
     ],
   });
+
+  plop.setGenerator('docs', {
+    description: 'Generate root repo documentation',
+    prompts: [],
+    actions: [
+      {
+        type: 'add',
+        path: 'README.md',
+        templateFile: 'templates/README.hbs.md',
+        force: true,
+        data: {jsPackageNames},
+      },
+    ],
+  });
 };
+
+function getPackageNames() {
+  const packagesPath = path.join(__dirname, 'packages');
+  return readdirSync(packagesPath).filter(hasPackageJson);
+
+  function hasPackageJson(directoryName) {
+    const packageJsonPath = path.join(
+      packagesRootPath,
+      directoryName,
+      'package.json',
+    );
+    return existsSync(packageJsonPath);
+  }
+}
