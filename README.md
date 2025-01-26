@@ -12,13 +12,37 @@ This repo is managed as a monorepo that is composed of many npm packages, where 
 
 ### Packages
 
-| Package | Version | Size |
-| :------ | :-----: | :--: |
-
-| [**babel-preset**](packages/babel-preset) | [![npm version](https://badge.fury.io/js/%40fmss%2Fbabel-preset.svg)](https://badge.fury.io/js/%40fmss%2Fbabel-preset) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@fmss/babel-preset.svg)](https://img.shields.io/bundlephobia/minzip/@fmss/babel-preset.svg) |
-| [**eslint-plugin**](packages/eslint-plugin) | [![npm version](https://badge.fury.io/js/%40fmss%2Feslint-plugin.svg)](https://badge.fury.io/js/%40fmss%2Feslint-plugin) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@fmss/eslint-plugin.svg)](https://img.shields.io/bundlephobia/minzip/@fmss/eslint-plugin.svg) |
-| [**prettier-config**](packages/prettier-config) | [![npm version](https://badge.fury.io/js/%40fmss%2Fprettier-config.svg)](https://badge.fury.io/js/%40fmss%2Fprettier-config) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@fmss/prettier-config.svg)](https://img.shields.io/bundlephobia/minzip/@fmss/prettier-config.svg) |
-| [**typescript-config**](packages/typescript-config) | [![npm version](https://badge.fury.io/js/%40fmss%2Ftypescript-config.svg)](https://badge.fury.io/js/%40fmss%2Ftypescript-config) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@fmss/typescript-config.svg)](https://img.shields.io/bundlephobia/minzip/@fmss/typescript-config.svg) |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Package</th>
+      <th align="left">Version</th>
+      <th align="left">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><a href="packages/babel-preset"><strong>babel-preset</strong></a></td>
+      <td align="left"><a href="https://badge.fury.io/js/%40fmss%2Fbabel-preset"><img src="https://badge.fury.io/js/%40fmss%2Fbabel-preset.svg" alt="npm version"></a></td>
+      <td align="left"><a href="https://img.shields.io/bundlephobia/minzip/@fmss/babel-preset.svg"><img src="https://img.shields.io/bundlephobia/minzip/@fmss/babel-preset.svg" alt="npm bundle size"></a></td>
+    </tr>
+    <tr>
+      <td align="left"><a href="packages/eslint-plugin"><strong>eslint-plugin</strong></a></td>
+      <td align="left"><a href="https://badge.fury.io/js/%40fmss%2Feslint-plugin"><img src="https://badge.fury.io/js/%40fmss%2Feslint-plugin.svg" alt="npm version"></a></td>
+      <td align="left"><a href="https://img.shields.io/bundlephobia/minzip/@fmss/eslint-plugin.svg"><img src="https://img.shields.io/bundlephobia/minzip/@fmss/eslint-plugin.svg" alt="npm bundle size"></a></td>
+    </tr>
+    <tr>
+      <td align="left"><a href="packages/prettier-config"><strong>prettier-config</strong></a></td>
+      <td align="left"><a href="https://badge.fury.io/js/%40fmss%2Fprettier-config"><img src="https://badge.fury.io/js/%40fmss%2Fprettier-config.svg" alt="npm version"></a></td>
+      <td align="left"><a href="https://img.shields.io/bundlephobia/minzip/@fmss/prettier-config.svg"><img src="https://img.shields.io/bundlephobia/minzip/@fmss/prettier-config.svg" alt="npm bundle size"></a></td>
+    </tr>
+    <tr>
+      <td align="left"><a href="packages/typescript-config"><strong>typescript-config</strong></a></td>
+      <td align="left"><a href="https://badge.fury.io/js/%40fmss%2Ftypescript-config"><img src="https://badge.fury.io/js/%40fmss%2Ftypescript-config.svg" alt="npm version"></a></td>
+      <td align="left"><a href="https://img.shields.io/bundlephobia/minzip/@fmss/typescript-config.svg"><img src="https://img.shields.io/bundlephobia/minzip/@fmss/typescript-config.svg" alt="npm bundle size"></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Contributing
 
