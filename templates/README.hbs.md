@@ -12,11 +12,11 @@ This repo is managed as a monorepo that is composed of many npm packages, where 
 
 ### Packages
 
-| Name | NPM | Size |
-| ---- | --- | ---- |
+| Package | Version | Size |
+| :------ | :-----: | :--: |
 
 {{#each jsPackageNames}}
-| [{{this}}](packages/{{this}}) | [![npm version](https://badge.fury.io/js/%40fmss%2F{{this}}.svg)](https://badge.fury.io/js/%40fmss%2F{{this}}) | [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@fmss/{{this}}.svg)](https://img.shields.io/bundlephobia/minzip/@fmss/{{this}}.svg) |
+| [**{{this}}**](packages/{{this}}) | [![npm version](https://badge.fury.io/js/%40fmss%2F{{this}}.svg)](https://badge.fury.io/js/%40fmss%2F{{this}}) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@fmss/{{this}}.svg)](https://img.shields.io/bundlephobia/minzip/@fmss/{{this}}.svg) |
 {{/each}}
 
 ### Contributing
