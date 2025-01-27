@@ -1,13 +1,11 @@
 const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin');
 const typescriptEslintParser = require('@typescript-eslint/parser');
-const importTypescriptConfig = require('eslint-plugin-import');
 
 const kanvilEsnextConfig = require('./esnext');
 
 /** @type {import('eslint').Linter.Config[]} */
 module.exports = [
   ...kanvilEsnextConfig,
-  importTypescriptConfig.configs.typescript,
   {
     files: ['**/*.ts', '**/*.tsx'],
 

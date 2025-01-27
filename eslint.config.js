@@ -10,20 +10,4 @@ module.exports = [
   ...kanvilEslintPlugin.configs.prettier,
   ...kanvilEslintPlugin.configs.node,
   ...kanvilEslintPlugin.configs.jest,
-  {
-    rules: {
-      'import/extensions': [
-        'error',
-        'ignorePackages',
-        {
-          js: 'never',
-          mjs: 'always',
-          cjs: 'always',
-          ts: 'never',
-          cts: 'always',
-          mts: 'always',
-        },
-      ],
-    },
-  },
 ];
