@@ -118,18 +118,18 @@ module.exports = [
         },
       ],
       // Enforces that types will not to be used
-      // '@typescript-eslint/ban-types': [
-      //   'error',
-      //   {
-      //     types: {
-      //       String: {message: 'Use string instead', fixWith: 'string'},
-      //       Boolean: {message: 'Use boolean instead', fixWith: 'boolean'},
-      //       Number: {message: 'Use number instead', fixWith: 'number'},
-      //       Object: {message: 'Use object instead', fixWith: 'object'},
-      //       Array: {message: 'Provide a more specific type'},
-      //     },
-      //   },
-      // ],
+      '@typescript-eslint/ban-types': [
+        'error',
+        {
+          types: {
+            String: {message: 'Use string instead', fixWith: 'string'},
+            Boolean: {message: 'Use boolean instead', fixWith: 'boolean'},
+            Number: {message: 'Use number instead', fixWith: 'number'},
+            Object: {message: 'Use object instead', fixWith: 'object'},
+            Array: {message: 'Provide a more specific type'},
+          },
+        },
+      ],
       '@typescript-eslint/no-restricted-types': [
         'error',
         {
@@ -163,57 +163,57 @@ module.exports = [
 
       // Enforce camelCase naming convention and PascalCase class and interface names
       '@typescript-eslint/naming-convention': 'off',
-      // '@typescript-eslint/naming-convention': [
-      //   'error',
-      //   {
-      //     selector: 'default',
-      //     format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-      //     leadingUnderscore: 'allow',
-      //     trailingUnderscore: 'allow',
-      //   },
-      //   {
-      //     selector: 'default',
-      //     filter: {
-      //       match: true,
-      //       // Allow double underscores and React UNSAFE_ (for lifecycle hooks that are to be deprecated)
-      //       regex: '^(__|UNSAFE_).+$',
-      //     },
-      //     format: null,
-      //   },
-      //   {
-      //     selector: 'typeLike',
-      //     format: ['PascalCase'],
-      //   },
-      //   {
-      //     selector: 'typeParameter',
-      //     format: ['PascalCase'],
-      //     prefix: ['T'],
-      //   },
-      //   {
-      //     selector: 'interface',
-      //     format: ['PascalCase'],
-      //     custom: {
-      //       regex: '^I[A-Z]',
-      //       match: false,
-      //     },
-      //   },
-      //   {
-      //     selector: 'variable',
-      //     types: ['boolean'],
-      //     format: ['PascalCase'],
-      //     prefix: ['is', 'should', 'has', 'can', 'did', 'will'],
-      //   },
-      //   {
-      //     selector: 'objectLiteralProperty',
-      //     format: [
-      //       'camelCase',
-      //       'PascalCase',
-      //       'UPPER_CASE',
-      //       'snake_case',
-      //       'kebab-case',
-      //     ],
-      //   },
-      // ],
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'default',
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+        },
+        {
+          selector: 'default',
+          filter: {
+            match: true,
+            // Allow double underscores and React UNSAFE_ (for lifecycle hooks that are to be deprecated)
+            regex: '^(__|UNSAFE_).+$',
+          },
+          format: null,
+        },
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+        },
+        {
+          selector: 'typeParameter',
+          format: ['PascalCase'],
+          prefix: ['T'],
+        },
+        {
+          selector: 'interface',
+          format: ['PascalCase'],
+          custom: {
+            regex: '^I[A-Z]',
+            match: false,
+          },
+        },
+        {
+          selector: 'variable',
+          types: ['boolean'],
+          format: ['PascalCase'],
+          prefix: ['is', 'should', 'has', 'can', 'did', 'will'],
+        },
+        {
+          selector: 'objectLiteralProperty',
+          format: [
+            'camelCase',
+            'PascalCase',
+            'UPPER_CASE',
+            'snake_case',
+            'kebab-case',
+          ],
+        },
+      ],
       // Enforces naming of generic type variables
       '@typescript-eslint/generic-type-naming': 'off',
       // Enforce consistent indentation
