@@ -7,7 +7,7 @@ FMSS's Babel preset configuration
 ## Installation
 
 ```bash
-npm install --save-dev @fmss/babel-preset
+npm install --save-dev @babel/core @fmss/babel-preset
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ In your `babel.config.js` or `.babelrc` file:
 
 ```js
 module.exports = {
-  presets: ['@fmss/babel-preset', { typescript: true, react: false }]
+  presets: ['@fmss/babel-preset', {typescript: true, react: false}],
 };
 ```
 
@@ -36,21 +36,21 @@ module.exports = {
       {
         // TypeScript support
         typescript: false,
-        
+
         // React support
         react: false,
-        
+
         // CoreJS version
         corejs: 3,
-        
+
         // Module format ('auto', 'commonjs', false, etc.)
         modules: 'auto',
-        
+
         // Polyfill strategy ('entry', 'usage', false)
-        useBuiltIns: 'entry'
-      }
-    ]
-  ]
+        useBuiltIns: 'entry',
+      },
+    ],
+  ],
 };
 ```
 
