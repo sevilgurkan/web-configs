@@ -3,6 +3,14 @@ const reactPlugin = require('eslint-plugin-react');
 const reactHooksPlugin = require('eslint-plugin-react-hooks');
 const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
 
+const disabledRules = {
+  // Use TypeScript over `prop-types`, as `prop-types` can add
+  // to a project's build size.
+  'react/prop-types': 'off',
+  // Disable requiring React to be imported, as this is no longer required.
+  'react/react-in-jsx-scope': 'off',
+};
+
 /** @type {import('eslint').Linter.Config[]} */
 module.exports = [
   {
@@ -35,6 +43,8 @@ module.exports = [
        *        React          *
        *                       *
        * * * * * * * * * * * * */
+
+      ...disabledRules,
 
       // Enforces consistent naming for boolean props
       'react/boolean-prop-naming': 'off',
@@ -115,10 +125,6 @@ module.exports = [
         'error',
         {ignorePureComponents: true},
       ],
-      // Prevent missing props validation in a React component definition
-      'react/prop-types': 'error',
-      // Prevent missing React when using JSX
-      'react/react-in-jsx-scope': 'error',
       // Enforce a defaultProps definition for every prop that is not a required prop
       'react/require-default-props': 'off',
       // Enforce React components to have a shouldComponentUpdate method
@@ -168,7 +174,7 @@ module.exports = [
       // Enforce or disallow spaces around equal signs in JSX attributes
       'react/jsx-equals-spacing': ['error', 'never'],
       // Restrict file extensions that may contain JSX
-      'react/jsx-filename-extension': ['error', {extensions: ['.js']}],
+      'react/jsx-filename-extension': ['error', {extensions: ['.jsx', '.tsx']}],
       // Enforce position of the first prop in JSX
       'react/jsx-first-prop-new-line': ['error', 'multiline'],
       // Enforce event handler naming conventions in JSX

@@ -87,8 +87,18 @@ module.exports = [
           ],
         },
       ],
-      // Prevent TypeScript-specific constructs from being erroneously flagged as unused
       '@typescript-eslint/no-unused-vars': 'off',
+      // Prevent TypeScript-specific constructs from being erroneously flagged as unused
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          ignoreRestSiblings: false,
+          vars: 'all',
+          varsIgnorePattern: '^_',
+        },
+      ],
       // Enforce member overloads to be consecutive.
       '@typescript-eslint/adjacent-overload-signatures': 'error',
       // Disallow parameter properties in class constructors. (no-parameter-properties from TSLint)
@@ -115,19 +125,6 @@ module.exports = [
         {
           default: 'array',
           readonly: 'generic',
-        },
-      ],
-      // Enforces that types will not to be used
-      '@typescript-eslint/ban-types': [
-        'error',
-        {
-          types: {
-            String: {message: 'Use string instead', fixWith: 'string'},
-            Boolean: {message: 'Use boolean instead', fixWith: 'boolean'},
-            Number: {message: 'Use number instead', fixWith: 'number'},
-            Object: {message: 'Use object instead', fixWith: 'object'},
-            Array: {message: 'Provide a more specific type'},
-          },
         },
       ],
       '@typescript-eslint/no-restricted-types': [
@@ -205,13 +202,7 @@ module.exports = [
         },
         {
           selector: 'objectLiteralProperty',
-          format: [
-            'camelCase',
-            'PascalCase',
-            'UPPER_CASE',
-            'snake_case',
-            'kebab-case',
-          ],
+          format: null,
         },
       ],
       // Enforces naming of generic type variables

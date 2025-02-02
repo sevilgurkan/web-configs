@@ -32,6 +32,10 @@
   "devDependencies": {
     "jest": "^29.7.0"
   },
+  "peerDependencies": {
+    "prettier": ">=3.0.0",
+    "prettier-plugin-packagejson": ">=2.5.7"
+  },
   "publishConfig": {
     "@fmss:registry": "https://registry.npmjs.org",
     "access": "public"

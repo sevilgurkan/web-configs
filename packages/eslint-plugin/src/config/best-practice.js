@@ -394,7 +394,7 @@ module.exports = {
      *
      * 🔧 Fixable - https://eslint.org/docs/rules/no-process-env
      */
-    'no-process-env': 'error',
+    'no-process-env': 'off',
 
     /**
      * Disallow declaring the same variable more than once.
