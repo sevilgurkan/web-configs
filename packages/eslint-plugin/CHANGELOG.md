@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.0
+
+### Minor Changes
+
+- [`bafc1ef`](https://github.com/sevilgurkan/web-configs/commit/bafc1ef3dd1fee70e6153361602d22c25c15a2c8) Thanks [@sevilgurkan](https://github.com/sevilgurkan)! - ESLint and Prettier configuration updates:
+
+  - Enhanced configuration of `no-unused-vars` rule in TypeScript ruleset
+  - Updated React rules to align with modern React development practices
+  - Enhanced and expanded accessibility (a11y) rules
+  - Made naming convention rules more flexible
+
 ## 1.2.0
 
 ### Minor Changes
